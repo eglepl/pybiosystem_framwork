@@ -94,19 +94,17 @@ class BioSystem:
         for c in self.compositors:
             y0.append(c.value)
         t = np.linspace(tspan[0], tspan[1], int(tspan[1] - tspan[0]) * 17)
-        #TODO: missing args for odeint from this function arguments
+        #TODO: missing args for odeint from this function arguments.
         y = odeint(self.sys_ode, y0, t)
         return (t, y)
 
     def sys_ode(self, y, t):
         dy = np.zeros(len(y))
-        #TODO: find out what is cellarray
-        # cellarray = num2cell(y);
-        cellarray = None
+
         for i in range(0, len(self.compositors)):
             k = self.compositors[i]
             arg = [t] + list(y)
-            dy[i] = k.ratef(*arg) # list as arguments
+            dy[i] = k.ratef(*arg) # list as arguments for function
         return dy
 
     def run_pulses(self, pulse_series):
