@@ -93,7 +93,7 @@ class BioSystem:
         y0 = []
         for c in self.compositors:
             y0.append(c.value)
-        t = np.linspace(tspan[0], tspan[1], 50)
+        t = np.linspace(tspan[0], tspan[1], int(tspan[1] - tspan[0]) * 17)
         #TODO: missing args for odeint from this function arguments
         y = odeint(self.sys_ode, y0, t)
         return (t, y)
@@ -106,7 +106,7 @@ class BioSystem:
         for i in range(0, len(self.compositors)):
             k = self.compositors[i]
             arg = [t] + list(y)
-            dy[i] = k.ratef(*arg)
+            dy[i] = k.ratef(*arg) # list as arguments
         return dy
 
     def run_pulses(self, pulse_series):
@@ -118,25 +118,30 @@ class BioSystem:
         prev_start = 0
         prev_end = 0
 
-        for i in range(0, (len(num_pulses) - 1)):
+        for i in range(0, num_pulses - 1):
             pulse = pulse_series[i]
-            if not pulse.compositor_name:
+            if pulse.compositor_name:
                 self.compositors[self.map_compositors[pulse.compositor_name]].value = pulse.value
 
             sim_length = pulse_series[i+1].time - pulse.time
             tspan = [prev_end, prev_end + sim_length]
             (T_sim, Y_sim) = self.run(tspan)
 
-            T.append(T_sim[2:])
-            Y.append(Y_sim[2:])
+
+            T = T + list(T_sim[2:])
+            if(len(Y) > 0):
+                Y = np.concatenate((Y, Y_sim[2:]))
+            else:
+                Y = Y_sim[2:]
 
             prev_start = pulse.time
             prev_end = prev_start + sim_length
 
-            for i in range(0, len(self.compositors)):
-                self.compositors[i].value = Y_sim[-1][i]
+            for j in range(0, len(self.compositors)):
+                self.compositors[j].value = Y_sim[-1][j]
 
         self.reset_state_variables()
+        return (T, Y)
 
     def time_to_index(ignore, T, t):
         i = 0
