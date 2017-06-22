@@ -15,3 +15,6 @@ class Rate:
 
     def __init__(self, rate_string):
         self.rate_string = rate_string
+
+    def __str__(self):
+        return self.rate_string

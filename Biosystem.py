@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
+import numpy as np
 from sympy import *
 from scipy.integrate import *
 from Compositor import Compositor
 from Const import Const
-
+import inspect
 
 class BioSystem:
 
@@ -97,12 +98,15 @@ class BioSystem:
         y = odeint(self.sys_ode, y0, t)
         return (t, y)
 
-    def sys_ode(self, t, y):
+    def sys_ode(self, y, t):
         dy = np.zeros(len(y))
         #TODO: find out what is cellarray
+        # cellarray = num2cell(y);
         cellarray = None
         for i in range(0, len(self.compositors)):
-            dy[i] = self.compositors[i].ratef(t, cellarray)
+            k = self.compositors[i]
+            arg = [t] + list(y)
+            dy[i] = k.ratef(*arg)
         return dy
 
     def run_pulses(self, pulse_series):
@@ -135,7 +139,7 @@ class BioSystem:
         self.reset_state_variables()
 
     def time_to_index(ignore, T, t):
-        i = 0;
+        i = 0
         while i < len(T):
             if T[i] >= t:
                 break
@@ -198,4 +202,4 @@ class BioSystem:
             y1 = interpolated
             x2 = X1
             y2 = Y1
-        return [ x1, y1, x2, y2 ]
+        return [x1, y1, x2, y2]
