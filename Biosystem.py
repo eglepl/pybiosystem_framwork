@@ -93,7 +93,8 @@ class BioSystem:
         y0 = []
         for c in self.compositors:
             y0.append(c.value)
-        t = np.linspace(tspan[0], tspan[1], int(tspan[1] - tspan[0]) * 17)
+        delta = max(int(tspan[1] - tspan[0]) * 17, 1000);
+        t = np.linspace(tspan[0], tspan[1], delta)
         #TODO: missing args for odeint from this function arguments.
         y = odeint(self.sys_ode, y0, t)
         return (t, y)
