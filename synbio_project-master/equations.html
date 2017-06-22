@@ -1,0 +1,47 @@
+<html>
+<head>
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+</head>
+<body>
+<p>
+</p><p>
+  `(dm_(R1))/dt = k_(txn)*(K_(Rst)^n/(K_(Rst)^n+Rst^n))*(K_A^n/(K_A^n+A^n)) - k_(mdeg)*m_(R1)`
+</p><p>
+  `(dR1)/dt = k_(tln)*m_(R1) - k_(pdeg)*R1`
+</p><p>
+  `(dm_(R2))/dt =k_(txn)*(k_(Rst)^n/(k_(Rst)^n+Rst^n))*(K_B^n/(K_B^n+B^n)) + k_(txn)*(k_(Rst)^n/(k_(Rst)^n+Rst^n))*(K_(R1)^n/(K_(R1)^n+R1^n)) - k_(mdeg)*m_(R2)`
+</p><p>
+  `(dR2)/dt =k_(tln)*m_(R2) - k_(pdeg)*R2`
+</p><p>
+  `(dm_(R3))/dt =k_(txn)*(k_(Rst)^n/(k_(Rst)^n+Rst^n))*(K_(R2)^n/(K_(R2)^n+R2^n)) - k_(mdeg)*m_(R3)`
+</p><p>
+  `(dR3)/dt =k_(tln)*m_(R3) - k_(pdeg)*R3`
+</p><p>
+  `(dm_(Rtrue))/dt =k_(txn)*(k_(Rst)^n/(k_(Rst)^n+Rst^n))*(K_(R2)^n/(K_(R2)^n+R2^n)) - k_(mdeg)*m_(Rtrue)`
+</p><p>
+  `(dRtrue)/dt =k_(tln)*m_(Rtrue) - k_(pdeg)*Rtrue`
+</p><p>
+  `(dm_(Rfalse))/dt =k_(txn)*(k_(Rst)^n/(k_(Rst)^n+Rst^n))*(K_(R3)^n/(K_(R3)^n+R3^n)) - k_(mdeg)*m_(Rfalse)`
+</p><p>
+  `(dRfalse)/dt =k_(tln)*m_(Rfalse) - k_(pdeg)*Rfalse`
+</p><p>
+  `(dm_(Rstn))/dt =k_(txn)*(K_(Rtrue)^n/(K_(Rtrue)^n+Rtrue^n))*(K_(Rfalse)^n/(K_(Rfalse)^n+Rfalse^n)) - k_(mdeg)*m_(Rstn)`
+</p><p>
+  `(dRstn)/dt =k_(tln)*m_(Rstn) - k_(pdeg)*Rstn`
+</p><p>
+  `(dm_(Rst))/dt = k_(txn)*(k_(Rstn)^n/(k_(Rstn)^n+Rstn^n)) - k_(mdeg)*m_(Rst)`
+</p><p>
+  `(dRst)/dt = k_(tln)*m_(Rst) - k_(pdeg)*Rst`
+</p><p>
+  `(dm_(OUT))/dt = k_(txn)*(K_(Rfalse)^n/(K_(Rfalse)^n+Rfalse^n))*(K_(OUTn)^n/(K_(OUTn)^n+OUTn^n)) - k_(mdeg)*m_(OUT)`
+</p><p>
+  `(dOUT)/dt = k_(tln)*m_(OUT) - k_(pdeg)*OUT`
+</p><p>
+  `(dm_(OUTn))/dt = k_(txn)*(K_(Rtrue)^n/(K_(Rtrue)^n+Rtrue^n))*(K_(OUT)^n/(K_(OUT)^n+OUT^n)) - k_(mdeg)*m_(OUTn)`
+</p><p>
+  `(dOUTn)/dt = k_(tln)*m_(OUTn) - k_(pdeg)*OUTn`
+</p>
+</body>
+</html>
