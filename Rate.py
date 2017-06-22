@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # ===============================
 # AUTHOR: Eglė Plėštytė
 #
@@ -10,7 +11,7 @@
 # ===============================
 
 
-class Rate
+class Rate:
 
     def __init__(self, rate_string):
-          self.rate_string = rate_string
+        self.rate_string = rate_string

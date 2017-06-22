@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # ===============================
 # AUTHOR: Eglė Plėštytė
 #
@@ -10,9 +11,9 @@
 # ===============================
 
 
-class Pulse
+class Pulse:
 
     def __init__(self, time, compositor_name, value):
-          self.time = time
-          self.compositor_name = compositor_name
-          self.value = value
+        self.time = time
+        self.compositor_name = compositor_name
+        self.value = value

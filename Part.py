@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # ===============================
 # AUTHOR: Eglė Plėštytė
 #
@@ -9,9 +10,10 @@
 # to some rate laws
 # ===============================
 
-class Part
+
+class Part:
 
     def __init__(self, name, compositors, rates):
-          self.name = name
-          self.compositors = compositors
-          self.rates = rates
+        self.name = name
+        self.compositors = compositors
+        self.rates = rates

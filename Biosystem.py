@@ -1,7 +1,12 @@
+# -*- coding: utf-8 -*-
+
 from sympy import *
 from scipy.integrate import *
+from Compositor import Compositor
+from Const import Const
 
-class BioSystem
+
+class BioSystem:
 
     parts = []
     compositors = []
@@ -10,8 +15,8 @@ class BioSystem
     rates_determined = False
 
     def __init__(self):
-          self.map_compositors = {}
-          self.map_constants = {}
+        self.map_compositors = {}
+        self.map_constants = {}
 
     def addCompositor(self, compositor, init_value=None):
         new_compositor = None
@@ -22,7 +27,7 @@ class BioSystem
             new_compositor = Compositor(name, init_value)
         self.compositors.append(new_compositor)
         self.map_compositors[new_compositor.name] = len(self.compositors) - 1
-        self.symbols.append(new_compository.sym)
+        self.symbols.append(new_compositor.sym)
         return new_compositor
 
     def compositorIndex(self, name):
@@ -38,13 +43,13 @@ class BioSystem
         if init_value == None:
             new_constant = constant
         else:
-            new_constant = Const (constant, init_value)
+            new_constant = Const(constant, init_value)
         self.constants.append(new_constant)
         self.map_constants[new_constant.name] = len(self.constants) - 1
         return new_constant
 
     def determine_rates(self):
-        if !self.rates_determined:
+        if not self.rates_determined:
             for i in self.parts:
                 p = i
                 for k in range(0, len(p.compositors)):
@@ -66,12 +71,12 @@ class BioSystem
         return None
 
     def changeConstantValue(self, name, value):
-        self.constants(self.map_constants[name]).value = value
+        self.constants[self.map_constants[name]].value = value
         self.reset_rates()
         return None
 
     def changeInitialValue(self, name, value):
-        compositor = self.compositors(self.map_compositors[name])
+        compositor = self.compositors[self.map_compositors[name]]
         compositor.setInitialValue(value)
         compositor.value = value
         return None
@@ -112,7 +117,7 @@ class BioSystem
         for i in range(0, (len(num_pulses) - 1)):
             pulse = pulse_series[i]
             if not pulse.compositor_name:
-                self.compositors(self.map_compositors(pulse.compositor_name)).value = pulse.value
+                self.compositors[self.map_compositors[pulse.compositor_name]].value = pulse.value
 
             sim_length = pulse_series[i+1].time - pulse.time
             tspan = [prev_end, prev_end + sim_length]
@@ -134,7 +139,7 @@ class BioSystem
         while i < len(T):
             if T[i] >= t:
                 break
-            i++
+            i = i + 1
         if T[i] == t:
             ix = i
         else:
@@ -162,7 +167,7 @@ class BioSystem
             x_diff = abs(x1 - X2[j])
             while (j < max_j - 1) and (abs(x1 - X2[j+1]) < x_diff):
                 x_diff = min(x_diff, abs(x1 - X2[j+1]))
-                j++
+                j = j + 1
 
             x2 = X2[j]
 
