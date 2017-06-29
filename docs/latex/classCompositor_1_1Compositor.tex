@@ -1,0 +1,157 @@
+\hypertarget{classCompositor_1_1Compositor}{}\subsection{Compositor.\+Compositor Class Reference}
+\label{classCompositor_1_1Compositor}\index{Compositor.\+Compositor@{Compositor.\+Compositor}}
+
+
+Substance concentration.  
+
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classCompositor_1_1Compositor_a8fb632191ba53b989002f54ad5227675}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self, \hyperlink{classCompositor_1_1Compositor_a87d9f58151be1502f8a10ffb4cdb8515}{name}, \hyperlink{classCompositor_1_1Compositor_a2f4d70bb0294f38fb00dfa4a43a9accf}{init\+\_\+value}=0)
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classCompositor_1_1Compositor_a96c82c9a0422d043372c98aefec65dc5}{add\+Rate} (self, new\+\_\+rate)
+\begin{DoxyCompactList}\small\item\em Add new rate represented as a string. \end{DoxyCompactList}\item 
+def \hyperlink{classCompositor_1_1Compositor_a549136c8bd578793eedf7a06e04d62c6}{set\+Initial\+Value} (self, \hyperlink{classCompositor_1_1Compositor_a2f4d70bb0294f38fb00dfa4a43a9accf}{init\+\_\+value})
+\begin{DoxyCompactList}\small\item\em Set initial concentration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCompositor_1_1Compositor_acfb506bc53105422233aad45a7eaa6fe}{rate}
+\begin{DoxyCompactList}\small\item\em Rate formula of the compositor. \end{DoxyCompactList}\item 
+\hyperlink{classCompositor_1_1Compositor_a87d9f58151be1502f8a10ffb4cdb8515}{name}
+\begin{DoxyCompactList}\small\item\em Substance name in a system. \end{DoxyCompactList}\item 
+\hyperlink{classCompositor_1_1Compositor_aa46010406a3b768a7b6a864166e71947}{sym}
+\begin{DoxyCompactList}\small\item\em A Symbol with a {\ttfamily name} representing a substance. \end{DoxyCompactList}\item 
+\hyperlink{classCompositor_1_1Compositor_a2f4d70bb0294f38fb00dfa4a43a9accf}{init\+\_\+value}
+\begin{DoxyCompactList}\small\item\em Initial concentration of a substance. \end{DoxyCompactList}\item 
+\hyperlink{classCompositor_1_1Compositor_a897d2fe21edf2aa868e7a47c8db7a007}{value}
+\begin{DoxyCompactList}\small\item\em Current concentration of a substance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Substance concentration. 
+
+A \hyperlink{classCompositor_1_1Compositor}{Compositor} is the total rate of change of a state variable, e.\+g. the concentration of some chemical substances, say d\+Enzyme/dt.
+
+\begin{DoxyAuthor}{Author}
+Eglė Plėštytė 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017-\/05-\/10 
+\end{DoxyDate}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\index{Compositor\+::\+Compositor@{Compositor\+::\+Compositor}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Compositor\+::\+Compositor@{Compositor\+::\+Compositor}}
+\paragraph[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self, name, init\+\_\+value=0)}{__init__(self, name, init_value=0)}}]{\setlength{\rightskip}{0pt plus 5cm}def Compositor.\+Compositor.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{name, }
+\item[{}]{init\+\_\+value = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classCompositor_1_1Compositor_a8fb632191ba53b989002f54ad5227675}{}\label{classCompositor_1_1Compositor_a8fb632191ba53b989002f54ad5227675}
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em name} & Name assigned to a \hyperlink{classCompositor_1_1Compositor}{Compositor} (Substance name). \\
+\hline
+{\em init\+\_\+value} & Initial concentration of a substance. \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\index{Compositor\+::\+Compositor@{Compositor\+::\+Compositor}!add\+Rate@{add\+Rate}}
+\index{add\+Rate@{add\+Rate}!Compositor\+::\+Compositor@{Compositor\+::\+Compositor}}
+\paragraph[{\texorpdfstring{add\+Rate(self, new\+\_\+rate)}{addRate(self, new_rate)}}]{\setlength{\rightskip}{0pt plus 5cm}def Compositor.\+Compositor.\+add\+Rate (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{new\+\_\+rate}
+\end{DoxyParamCaption}
+)}\hypertarget{classCompositor_1_1Compositor_a96c82c9a0422d043372c98aefec65dc5}{}\label{classCompositor_1_1Compositor_a96c82c9a0422d043372c98aefec65dc5}
+
+
+Add new rate represented as a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em new\+\_\+rate} & Rate to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The object pointer. 
+\end{DoxyReturn}
+\index{Compositor\+::\+Compositor@{Compositor\+::\+Compositor}!set\+Initial\+Value@{set\+Initial\+Value}}
+\index{set\+Initial\+Value@{set\+Initial\+Value}!Compositor\+::\+Compositor@{Compositor\+::\+Compositor}}
+\paragraph[{\texorpdfstring{set\+Initial\+Value(self, init\+\_\+value)}{setInitialValue(self, init_value)}}]{\setlength{\rightskip}{0pt plus 5cm}def Compositor.\+Compositor.\+set\+Initial\+Value (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{init\+\_\+value}
+\end{DoxyParamCaption}
+)}\hypertarget{classCompositor_1_1Compositor_a549136c8bd578793eedf7a06e04d62c6}{}\label{classCompositor_1_1Compositor_a549136c8bd578793eedf7a06e04d62c6}
+
+
+Set initial concentration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em init\+\_\+value} & Initial concentration of a substance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The object pointer. 
+\end{DoxyReturn}
+
+
+\subsubsection{Member Data Documentation}
+\index{Compositor\+::\+Compositor@{Compositor\+::\+Compositor}!init\+\_\+value@{init\+\_\+value}}
+\index{init\+\_\+value@{init\+\_\+value}!Compositor\+::\+Compositor@{Compositor\+::\+Compositor}}
+\paragraph[{\texorpdfstring{init\+\_\+value}{init_value}}]{\setlength{\rightskip}{0pt plus 5cm}Compositor.\+Compositor.\+init\+\_\+value}\hypertarget{classCompositor_1_1Compositor_a2f4d70bb0294f38fb00dfa4a43a9accf}{}\label{classCompositor_1_1Compositor_a2f4d70bb0294f38fb00dfa4a43a9accf}
+
+
+Initial concentration of a substance. 
+
+\index{Compositor\+::\+Compositor@{Compositor\+::\+Compositor}!name@{name}}
+\index{name@{name}!Compositor\+::\+Compositor@{Compositor\+::\+Compositor}}
+\paragraph[{\texorpdfstring{name}{name}}]{\setlength{\rightskip}{0pt plus 5cm}Compositor.\+Compositor.\+name}\hypertarget{classCompositor_1_1Compositor_a87d9f58151be1502f8a10ffb4cdb8515}{}\label{classCompositor_1_1Compositor_a87d9f58151be1502f8a10ffb4cdb8515}
+
+
+Substance name in a system. 
+
+\index{Compositor\+::\+Compositor@{Compositor\+::\+Compositor}!rate@{rate}}
+\index{rate@{rate}!Compositor\+::\+Compositor@{Compositor\+::\+Compositor}}
+\paragraph[{\texorpdfstring{rate}{rate}}]{\setlength{\rightskip}{0pt plus 5cm}Compositor.\+Compositor.\+rate}\hypertarget{classCompositor_1_1Compositor_acfb506bc53105422233aad45a7eaa6fe}{}\label{classCompositor_1_1Compositor_acfb506bc53105422233aad45a7eaa6fe}
+
+
+Rate formula of the compositor. 
+
+\index{Compositor\+::\+Compositor@{Compositor\+::\+Compositor}!sym@{sym}}
+\index{sym@{sym}!Compositor\+::\+Compositor@{Compositor\+::\+Compositor}}
+\paragraph[{\texorpdfstring{sym}{sym}}]{\setlength{\rightskip}{0pt plus 5cm}Compositor.\+Compositor.\+sym}\hypertarget{classCompositor_1_1Compositor_aa46010406a3b768a7b6a864166e71947}{}\label{classCompositor_1_1Compositor_aa46010406a3b768a7b6a864166e71947}
+
+
+A Symbol with a {\ttfamily name} representing a substance. 
+
+\index{Compositor\+::\+Compositor@{Compositor\+::\+Compositor}!value@{value}}
+\index{value@{value}!Compositor\+::\+Compositor@{Compositor\+::\+Compositor}}
+\paragraph[{\texorpdfstring{value}{value}}]{\setlength{\rightskip}{0pt plus 5cm}Compositor.\+Compositor.\+value}\hypertarget{classCompositor_1_1Compositor_a897d2fe21edf2aa868e7a47c8db7a007}{}\label{classCompositor_1_1Compositor_a897d2fe21edf2aa868e7a47c8db7a007}
+
+
+Current concentration of a substance. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Compositor.\+py\end{DoxyCompactItemize}

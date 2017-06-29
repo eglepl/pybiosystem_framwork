@@ -1,0 +1,589 @@
+\hypertarget{classBiosystem_1_1BioSystem}{}\subsection{Biosystem.\+Bio\+System Class Reference}
+\label{classBiosystem_1_1BioSystem}\index{Biosystem.\+Bio\+System@{Biosystem.\+Bio\+System}}
+
+
+Biological system to simulate.  
+
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classBiosystem_1_1BioSystem_abaf437efe254a2bcaf9d390ff1d26787}{\+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\begin{DoxyCompactList}\small\item\em The constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classBiosystem_1_1BioSystem_a3ab704ced27e3561ac54e72d4eb122cb}{add\+Compositor} (self, compositor\+\_\+or\+\_\+name, init\+\_\+value=None)
+\begin{DoxyCompactList}\small\item\em Create or add a compositor to the system. \end{DoxyCompactList}\item 
+def \hyperlink{classBiosystem_1_1BioSystem_a38bfda2e47e58548852c6fd2c1724de7}{compositor\+Index} (self, name)
+\begin{DoxyCompactList}\small\item\em Get compositor index in the {\ttfamily compositors} with name {\ttfamily name}. \end{DoxyCompactList}\item 
+def \hyperlink{classBiosystem_1_1BioSystem_a3db2612e36df51bb8d22d9e7207ab46e}{add\+Part} (self, new\+\_\+part)
+\begin{DoxyCompactList}\small\item\em Add a part to the system. \end{DoxyCompactList}\item 
+def \hyperlink{classBiosystem_1_1BioSystem_ac73c6f3d406e720d2a6bd639e23e71c9}{add\+Constant} (self, constant\+\_\+or\+\_\+name, init\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Create or add a Constant to the system. \end{DoxyCompactList}\item 
+def \hyperlink{classBiosystem_1_1BioSystem_a205261d80af190ce702f22669eccd341}{determine\+\_\+rates} (self)
+\begin{DoxyCompactList}\small\item\em Determine rates of all compositors unless already determined. \end{DoxyCompactList}\item 
+def \hyperlink{classBiosystem_1_1BioSystem_ae22d539e21d5ac6639aa3bd12f2ade3f}{reset\+\_\+rates} (self)
+\begin{DoxyCompactList}\small\item\em Reset all Compositor rates to \textquotesingle{}0\textquotesingle{}. \end{DoxyCompactList}\item 
+def \hyperlink{classBiosystem_1_1BioSystem_a17c5172bbaaa9ca3abcf69a2f81e4e9b}{change\+Constant\+Value} (self, name, value)
+\begin{DoxyCompactList}\small\item\em Set Constant value by Constant name. \end{DoxyCompactList}\item 
+def \hyperlink{classBiosystem_1_1BioSystem_a5d37581d1c60b7ddfc87a8a5f1855795}{change\+Initial\+Value} (self, name, value)
+\begin{DoxyCompactList}\small\item\em Set Compositor value and initial value by a Compositor name. \end{DoxyCompactList}\item 
+def \hyperlink{classBiosystem_1_1BioSystem_a4e9667583839b21fdc6c45ebda13e71d}{reset\+\_\+state\+\_\+variables} (self)
+\begin{DoxyCompactList}\small\item\em Reset all Compositor values to its initial value. \end{DoxyCompactList}\item 
+def \hyperlink{classBiosystem_1_1BioSystem_a91601ed19ad24fd580c14a17b638bebe}{run} (self, tspan)
+\begin{DoxyCompactList}\small\item\em Run a simulation of the Biosystem. \end{DoxyCompactList}\item 
+def \hyperlink{classBiosystem_1_1BioSystem_a2f4d71b00f3bcd3c8a82684cb4faf56a}{sys\+\_\+ode} (self, y, t)
+\begin{DoxyCompactList}\small\item\em Ordinary diferential equatation of the system. \end{DoxyCompactList}\item 
+def \hyperlink{classBiosystem_1_1BioSystem_a0f06478f1ed0f58adcac32451c947ec9}{run\+\_\+pulses} (self, pulse\+\_\+series)
+\begin{DoxyCompactList}\small\item\em Run simulation given pulse list. \end{DoxyCompactList}\item 
+def \hyperlink{classBiosystem_1_1BioSystem_abc57f3f2db47b1234e8f8d17b57a287b}{time\+\_\+to\+\_\+index} (ignore, T, t)
+\begin{DoxyCompactList}\small\item\em Find the index in T (time point) list that gives a value just before t or exact t. \end{DoxyCompactList}\item 
+def \hyperlink{classBiosystem_1_1BioSystem_aea1aa21f537d2371abbfa0b00b41aab4}{interpolate\+\_\+traces} (ignore, i\+X1, i\+Y1, i\+X2, i\+Y2)
+\begin{DoxyCompactList}\small\item\em Given two (x, y) traces, interpolate the less dense one to have values for each x-\/value in the denser trace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBiosystem_1_1BioSystem_adc4002931a29601944a3e11191af7707}{parts}
+\begin{DoxyCompactList}\small\item\em Parts in a Biosystem. \end{DoxyCompactList}\item 
+\hyperlink{classBiosystem_1_1BioSystem_a1ea37fee07cb448e6833f7b9ab23d38a}{compositors}
+\begin{DoxyCompactList}\small\item\em Compositors involving chemical reactions. \end{DoxyCompactList}\item 
+\hyperlink{classBiosystem_1_1BioSystem_a849a36fc85493e2cc1798d7fd99a2771}{constants}
+\begin{DoxyCompactList}\small\item\em Constants in a Biosystem. \end{DoxyCompactList}\item 
+\hyperlink{classBiosystem_1_1BioSystem_a4a04b16611692fee47542e344d7a332d}{symbols}
+\begin{DoxyCompactList}\small\item\em List of all the Compositor symbols in ths \hyperlink{classBiosystem_1_1BioSystem}{Bio\+System} by initializing symbols with t we allow t to be a variable of time that\textquotesingle{}s not a Compositor or Constant. \end{DoxyCompactList}\item 
+\hyperlink{classBiosystem_1_1BioSystem_a0b7ed650ff3a0db588b21d55151fbee6}{map\+\_\+constants}
+\begin{DoxyCompactList}\small\item\em A mapping between constant name and its index in {\ttfamily constants} list. \end{DoxyCompactList}\item 
+\hyperlink{classBiosystem_1_1BioSystem_a927092fec3432044b77b39e106a75a40}{map\+\_\+compositors}
+\begin{DoxyCompactList}\small\item\em A mapping between compositor name and its index in {\ttfamily constants} list. \end{DoxyCompactList}\item 
+\hyperlink{classBiosystem_1_1BioSystem_a9189d6eb1e1965d9b63cda27e53f08b7}{rates\+\_\+determined}
+\begin{DoxyCompactList}\small\item\em Flag if function determine\+\_\+rates was called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Biological system to simulate. 
+
+In order to analyze a biological system you create a \hyperlink{classBiosystem_1_1BioSystem}{Bio\+System} object.
+
+Biological system might need some constants (Const) and compositors (Compositor). Compositors are the total rates of change of substance state variables.
+
+Then parts (Part) are declared and added to a system. Part is a process in a system (reaction) that affect some state variables by changing their value according to a rate law (Rate).
+
+Then a simulation can be started.
+
+Example\+:
+
+
+\begin{DoxyCode}
+1 \textcolor{keyword}{from} Biosystem \textcolor{keyword}{import} *
+2 \textcolor{keyword}{from} Part \textcolor{keyword}{import} *
+3 \textcolor{keyword}{from} Rate \textcolor{keyword}{import} *
+4 \textcolor{keyword}{from} Pulse \textcolor{keyword}{import} *
+5 \textcolor{keyword}{import} matplotlib.pyplot \textcolor{keyword}{as} plt
+6 
+7 sys = BioSystem()
+8 sys.addConstant(\textcolor{stringliteral}{'k'}, 0.05)
+9 dAdt = sys.addCompositor(\textcolor{stringliteral}{'A'}, 10)
+10 dBdt = sys.addCompositor(\textcolor{stringliteral}{'B'}, 0)
+11 dEdt = sys.addCompositor(\textcolor{stringliteral}{'E'}, 1)
+12 reaction  = \hyperlink{namespacePart}{Part}(
+13 \textcolor{stringliteral}{'A + E -k> B + E'},
+14 [dAdt, dBdt, dEdt],
+15 [\hyperlink{namespaceRate}{Rate}(\textcolor{stringliteral}{'-k * A * E'}), \hyperlink{namespaceRate}{Rate}(\textcolor{stringliteral}{'k * A * E'}), \hyperlink{namespaceRate}{Rate}(\textcolor{stringliteral}{'0'})])
+16 sys.addPart(reaction)
+17 T = \textcolor{keywordtype}{None}
+18 Y = \textcolor{keywordtype}{None}
+19 (T, Y) = sys.run([0, 25])
+20 
+21 \textcolor{comment}{# Plot the simulation data}
+22 plt.figure()
+23 plt.plot(T, Y[:, sys.compositorIndex(\textcolor{stringliteral}{'A'})], label=\textcolor{stringliteral}{"A"})
+24 plt.plot(T, Y[:, sys.compositorIndex(\textcolor{stringliteral}{'B'})], label=\textcolor{stringliteral}{"B"})
+25 plt.plot(T, Y[:, sys.compositorIndex(\textcolor{stringliteral}{'E'})], label=\textcolor{stringliteral}{"E"})
+26 plt.legend()
+27 plt.xlabel(\textcolor{stringliteral}{'Time'})
+28 plt.ylabel(\textcolor{stringliteral}{'Concentration'})
+29 plt.show()
+\end{DoxyCode}
+
+
+\begin{DoxyAuthor}{Author}
+Eglė Plėštytė 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017-\/06-\/15 
+\end{DoxyDate}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{\+\_\+\+\_\+init\+\_\+\+\_\+(self)}{__init__(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def Biosystem.\+Bio\+System.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classBiosystem_1_1BioSystem_abaf437efe254a2bcaf9d390ff1d26787}{}\label{classBiosystem_1_1BioSystem_abaf437efe254a2bcaf9d390ff1d26787}
+
+
+The constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em compositors} & Compositors involving chemical reactions. \\
+\hline
+{\em constants} & Constants of a Biosystem. \\
+\hline
+{\em symbols} & A Symbol with a {\ttfamily name} representing a substance. \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Member Function Documentation}
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!add\+Compositor@{add\+Compositor}}
+\index{add\+Compositor@{add\+Compositor}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{add\+Compositor(self, compositor\+\_\+or\+\_\+name, init\+\_\+value=\+None)}{addCompositor(self, compositor_or_name, init_value=None)}}]{\setlength{\rightskip}{0pt plus 5cm}def Biosystem.\+Bio\+System.\+add\+Compositor (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{compositor\+\_\+or\+\_\+name, }
+\item[{}]{init\+\_\+value = {\ttfamily None}}
+\end{DoxyParamCaption}
+)}\hypertarget{classBiosystem_1_1BioSystem_a3ab704ced27e3561ac54e72d4eb122cb}{}\label{classBiosystem_1_1BioSystem_a3ab704ced27e3561ac54e72d4eb122cb}
+
+
+Create or add a compositor to the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em compositor\+\_\+or\+\_\+name} & Compositor object to add if {\ttfamily init\+\_\+value} == None, else Compositor name to add with an {\ttfamily init\+\_\+value}.\\
+\hline
+{\em init\+\_\+value} & Initial value of a Compositor or None. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Compositor object that was added. 
+\end{DoxyReturn}
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!add\+Constant@{add\+Constant}}
+\index{add\+Constant@{add\+Constant}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{add\+Constant(self, constant\+\_\+or\+\_\+name, init\+\_\+value)}{addConstant(self, constant_or_name, init_value)}}]{\setlength{\rightskip}{0pt plus 5cm}def Biosystem.\+Bio\+System.\+add\+Constant (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{constant\+\_\+or\+\_\+name, }
+\item[{}]{init\+\_\+value}
+\end{DoxyParamCaption}
+)}\hypertarget{classBiosystem_1_1BioSystem_ac73c6f3d406e720d2a6bd639e23e71c9}{}\label{classBiosystem_1_1BioSystem_ac73c6f3d406e720d2a6bd639e23e71c9}
+
+
+Create or add a Constant to the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em constant\+\_\+or\+\_\+name} & Constant object to add if {\ttfamily init\+\_\+value} == None, else Constant name to add with an {\ttfamily init\+\_\+value}.\\
+\hline
+{\em init\+\_\+value} & Initial value of a Constant or None. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Constant object that was added. 
+\end{DoxyReturn}
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!add\+Part@{add\+Part}}
+\index{add\+Part@{add\+Part}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{add\+Part(self, new\+\_\+part)}{addPart(self, new_part)}}]{\setlength{\rightskip}{0pt plus 5cm}def Biosystem.\+Bio\+System.\+add\+Part (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{new\+\_\+part}
+\end{DoxyParamCaption}
+)}\hypertarget{classBiosystem_1_1BioSystem_a3db2612e36df51bb8d22d9e7207ab46e}{}\label{classBiosystem_1_1BioSystem_a3db2612e36df51bb8d22d9e7207ab46e}
+
+
+Add a part to the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em new\+\_\+part} & Part object to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current system object pointer. 
+\end{DoxyReturn}
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!change\+Constant\+Value@{change\+Constant\+Value}}
+\index{change\+Constant\+Value@{change\+Constant\+Value}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{change\+Constant\+Value(self, name, value)}{changeConstantValue(self, name, value)}}]{\setlength{\rightskip}{0pt plus 5cm}def Biosystem.\+Bio\+System.\+change\+Constant\+Value (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{name, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classBiosystem_1_1BioSystem_a17c5172bbaaa9ca3abcf69a2f81e4e9b}{}\label{classBiosystem_1_1BioSystem_a17c5172bbaaa9ca3abcf69a2f81e4e9b}
+
+
+Set Constant value by Constant name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em name} & The name of existing Constant. \\
+\hline
+{\em value} & New value of the Constant. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!change\+Initial\+Value@{change\+Initial\+Value}}
+\index{change\+Initial\+Value@{change\+Initial\+Value}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{change\+Initial\+Value(self, name, value)}{changeInitialValue(self, name, value)}}]{\setlength{\rightskip}{0pt plus 5cm}def Biosystem.\+Bio\+System.\+change\+Initial\+Value (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{name, }
+\item[{}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classBiosystem_1_1BioSystem_a5d37581d1c60b7ddfc87a8a5f1855795}{}\label{classBiosystem_1_1BioSystem_a5d37581d1c60b7ddfc87a8a5f1855795}
+
+
+Set Compositor value and initial value by a Compositor name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em name} & The name of existing Compositor. \\
+\hline
+{\em value} & New value of the Compositor {\ttfamily initial\+\_\+value} and Compositor {\ttfamily value}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!compositor\+Index@{compositor\+Index}}
+\index{compositor\+Index@{compositor\+Index}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{compositor\+Index(self, name)}{compositorIndex(self, name)}}]{\setlength{\rightskip}{0pt plus 5cm}def Biosystem.\+Bio\+System.\+compositor\+Index (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{classBiosystem_1_1BioSystem_a38bfda2e47e58548852c6fd2c1724de7}{}\label{classBiosystem_1_1BioSystem_a38bfda2e47e58548852c6fd2c1724de7}
+
+
+Get compositor index in the {\ttfamily compositors} with name {\ttfamily name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em name} & Existing compositor name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the index of a compositor in the system. 
+\end{DoxyReturn}
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!determine\+\_\+rates@{determine\+\_\+rates}}
+\index{determine\+\_\+rates@{determine\+\_\+rates}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{determine\+\_\+rates(self)}{determine_rates(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def Biosystem.\+Bio\+System.\+determine\+\_\+rates (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classBiosystem_1_1BioSystem_a205261d80af190ce702f22669eccd341}{}\label{classBiosystem_1_1BioSystem_a205261d80af190ce702f22669eccd341}
+
+
+Determine rates of all compositors unless already determined. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!interpolate\+\_\+traces@{interpolate\+\_\+traces}}
+\index{interpolate\+\_\+traces@{interpolate\+\_\+traces}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{interpolate\+\_\+traces(ignore, i\+X1, i\+Y1, i\+X2, i\+Y2)}{interpolate_traces(ignore, iX1, iY1, iX2, iY2)}}]{\setlength{\rightskip}{0pt plus 5cm}def Biosystem.\+Bio\+System.\+interpolate\+\_\+traces (
+\begin{DoxyParamCaption}
+\item[{}]{ignore, }
+\item[{}]{i\+X1, }
+\item[{}]{i\+Y1, }
+\item[{}]{i\+X2, }
+\item[{}]{i\+Y2}
+\end{DoxyParamCaption}
+)}\hypertarget{classBiosystem_1_1BioSystem_aea1aa21f537d2371abbfa0b00b41aab4}{}\label{classBiosystem_1_1BioSystem_aea1aa21f537d2371abbfa0b00b41aab4}
+
+
+Given two (x, y) traces, interpolate the less dense one to have values for each x-\/value in the denser trace. 
+
+i\+X1, i\+Y1 form one trace; i\+X2, i\+Y2 another. The \char`\"{}denser\char`\"{} trace (more datapoints) is used as the basis. Suppose the first is the denser trace. Then for each value of i\+X1, we find a linear fit of the second trace at that value using the two closest values of i\+X2. i\+X1, i\+X2 are assumed to be ordered and to both start at the same value. Assume i\+Y1, i\+Y2 are columns, i\+X1, i\+X2 are rows. 
+\begin{DoxyParams}{Parameters}
+{\em ignore} & Ignored argument. \\
+\hline
+{\em i\+X1} & List of X values in first trace. \\
+\hline
+{\em i\+Y1} & List of Y values in first trace. \\
+\hline
+{\em i\+X2} & List of X values in second trace. \\
+\hline
+{\em i\+Y2} & List of Y values in second trace. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tuple matched and interpolated traces. 
+\end{DoxyReturn}
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!reset\+\_\+rates@{reset\+\_\+rates}}
+\index{reset\+\_\+rates@{reset\+\_\+rates}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{reset\+\_\+rates(self)}{reset_rates(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def Biosystem.\+Bio\+System.\+reset\+\_\+rates (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classBiosystem_1_1BioSystem_ae22d539e21d5ac6639aa3bd12f2ade3f}{}\label{classBiosystem_1_1BioSystem_ae22d539e21d5ac6639aa3bd12f2ade3f}
+
+
+Reset all Compositor rates to \textquotesingle{}0\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!reset\+\_\+state\+\_\+variables@{reset\+\_\+state\+\_\+variables}}
+\index{reset\+\_\+state\+\_\+variables@{reset\+\_\+state\+\_\+variables}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{reset\+\_\+state\+\_\+variables(self)}{reset_state_variables(self)}}]{\setlength{\rightskip}{0pt plus 5cm}def Biosystem.\+Bio\+System.\+reset\+\_\+state\+\_\+variables (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{classBiosystem_1_1BioSystem_a4e9667583839b21fdc6c45ebda13e71d}{}\label{classBiosystem_1_1BioSystem_a4e9667583839b21fdc6c45ebda13e71d}
+
+
+Reset all Compositor values to its initial value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!run@{run}}
+\index{run@{run}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{run(self, tspan)}{run(self, tspan)}}]{\setlength{\rightskip}{0pt plus 5cm}def Biosystem.\+Bio\+System.\+run (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{tspan}
+\end{DoxyParamCaption}
+)}\hypertarget{classBiosystem_1_1BioSystem_a91601ed19ad24fd580c14a17b638bebe}{}\label{classBiosystem_1_1BioSystem_a91601ed19ad24fd580c14a17b638bebe}
+
+
+Run a simulation of the Biosystem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em tspan} & Time interval to simulate, for example \mbox{[}t0, t1\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tuple (T, Y), where T -\/ time point list, Y -\/ matrix consisting of Compositor values at a time points. 
+\end{DoxyReturn}
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!run\+\_\+pulses@{run\+\_\+pulses}}
+\index{run\+\_\+pulses@{run\+\_\+pulses}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{run\+\_\+pulses(self, pulse\+\_\+series)}{run_pulses(self, pulse_series)}}]{\setlength{\rightskip}{0pt plus 5cm}def Biosystem.\+Bio\+System.\+run\+\_\+pulses (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{pulse\+\_\+series}
+\end{DoxyParamCaption}
+)}\hypertarget{classBiosystem_1_1BioSystem_a0f06478f1ed0f58adcac32451c947ec9}{}\label{classBiosystem_1_1BioSystem_a0f06478f1ed0f58adcac32451c947ec9}
+
+
+Run simulation given pulse list. 
+
+Last pulse is not simulated. Each pulse defines time, Compositor, Compositor value to set at provided time.
+
+When the Pulse time comes Pulse defined Compositor is set to value provided. Normal simulation is carried on till next Pulse. While there is next Pulse -\/ action repeats.
+
+First Pulse should start at t = 0 time. Each next Pulse time should be greater than previous. Last Pulse is not simulated -\/ it is a stop time.
+
+Example\+:
+
+
+\begin{DoxyCode}
+1 \textcolor{keyword}{from} Biosystem \textcolor{keyword}{import} *
+2 \textcolor{keyword}{from} Part \textcolor{keyword}{import} *
+3 \textcolor{keyword}{from} Rate \textcolor{keyword}{import} *
+4 \textcolor{keyword}{from} Pulse \textcolor{keyword}{import} *
+5 \textcolor{keyword}{import} matplotlib.pyplot \textcolor{keyword}{as} plt
+6 
+7 sys = BioSystem()
+8 sys.addConstant(\textcolor{stringliteral}{'k'}, 0.05)
+9 dAdt = sys.addCompositor(\textcolor{stringliteral}{'A'}, 10)
+10 dBdt = sys.addCompositor(\textcolor{stringliteral}{'B'}, 0)
+11 dEdt = sys.addCompositor(\textcolor{stringliteral}{'E'}, 1)
+12 reaction  = \hyperlink{namespacePart}{Part}(
+13 \textcolor{stringliteral}{'A + E -k> B + E'},
+14 [dAdt, dBdt, dEdt],
+15 [\hyperlink{namespaceRate}{Rate}(\textcolor{stringliteral}{'-k * A * E'}), \hyperlink{namespaceRate}{Rate}(\textcolor{stringliteral}{'k * A * E'}), \hyperlink{namespaceRate}{Rate}(\textcolor{stringliteral}{'0'})])
+16 sys.addPart(reaction)
+17 T = \textcolor{keywordtype}{None}
+18 Y = \textcolor{keywordtype}{None}
+19 
+20 pulses = []
+21 
+22 \textcolor{comment}{# initial condition}
+23 pulses.append(\hyperlink{namespacePulse}{Pulse}(0, \textcolor{stringliteral}{'A'}, 10))
+24 
+25 \textcolor{comment}{# spike in some A}
+26 pulses.append(\hyperlink{namespacePulse}{Pulse}(100, \textcolor{stringliteral}{'A'}, 20))
+27 
+28 \textcolor{comment}{# spike in a bit less A}
+29 pulses.append(\hyperlink{namespacePulse}{Pulse}(150, \textcolor{stringliteral}{'A'}, 5))
+30 
+31 \textcolor{comment}{# spike in more A again}
+32 pulses.append(\hyperlink{namespacePulse}{Pulse}(250, \textcolor{stringliteral}{'A'}, 10))
+33 
+34 \textcolor{comment}{# stop the simulation at time 500 with this empty string as the state}
+35 \textcolor{comment}{# variable parameter}
+36 pulses.append(\hyperlink{namespacePulse}{Pulse}(500, \textcolor{stringliteral}{''}, 0))
+37 
+38 \textcolor{comment}{# Run pulsed simulation}
+39 (T, Y) = sys.run\_pulses(pulses)
+40 
+41 \textcolor{comment}{# Plot the simulation data}
+42 plt.figure()
+43 plt.plot(T, Y[:, sys.compositorIndex(\textcolor{stringliteral}{'A'})], label=\textcolor{stringliteral}{"A"})
+44 plt.plot(T, Y[:, sys.compositorIndex(\textcolor{stringliteral}{'B'})], label=\textcolor{stringliteral}{"B"})
+45 plt.plot(T, Y[:, sys.compositorIndex(\textcolor{stringliteral}{'E'})], label=\textcolor{stringliteral}{"E"})
+46 plt.legend()
+47 plt.xlabel(\textcolor{stringliteral}{'Time'})
+48 plt.ylabel(\textcolor{stringliteral}{'Concentration'})
+49 plt.show()
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em pulse\+\_\+series} & List of pulse objects. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tuple (T, Y), where T -\/ time point list, Y -\/ matrix consisting of Compositor values at a time points. 
+\end{DoxyReturn}
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!sys\+\_\+ode@{sys\+\_\+ode}}
+\index{sys\+\_\+ode@{sys\+\_\+ode}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{sys\+\_\+ode(self, y, t)}{sys_ode(self, y, t)}}]{\setlength{\rightskip}{0pt plus 5cm}def Biosystem.\+Bio\+System.\+sys\+\_\+ode (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{y, }
+\item[{}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{classBiosystem_1_1BioSystem_a2f4d71b00f3bcd3c8a82684cb4faf56a}{}\label{classBiosystem_1_1BioSystem_a2f4d71b00f3bcd3c8a82684cb4faf56a}
+
+
+Ordinary diferential equatation of the system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & The object pointer. \\
+\hline
+{\em y} & System compositors values. \\
+\hline
+{\em t} & Time point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+change of Compositor values. 
+\end{DoxyReturn}
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!time\+\_\+to\+\_\+index@{time\+\_\+to\+\_\+index}}
+\index{time\+\_\+to\+\_\+index@{time\+\_\+to\+\_\+index}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{time\+\_\+to\+\_\+index(ignore, T, t)}{time_to_index(ignore, T, t)}}]{\setlength{\rightskip}{0pt plus 5cm}def Biosystem.\+Bio\+System.\+time\+\_\+to\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{}]{ignore, }
+\item[{}]{T, }
+\item[{}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{classBiosystem_1_1BioSystem_abc57f3f2db47b1234e8f8d17b57a287b}{}\label{classBiosystem_1_1BioSystem_abc57f3f2db47b1234e8f8d17b57a287b}
+
+
+Find the index in T (time point) list that gives a value just before t or exact t. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ignore} & Ignored argument. \\
+\hline
+{\em T} & A list of time points. \\
+\hline
+{\em t} & Time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of T just before t (or exact t). 
+\end{DoxyReturn}
+
+
+\subsubsection{Member Data Documentation}
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!compositors@{compositors}}
+\index{compositors@{compositors}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{compositors}{compositors}}]{\setlength{\rightskip}{0pt plus 5cm}Biosystem.\+Bio\+System.\+compositors}\hypertarget{classBiosystem_1_1BioSystem_a1ea37fee07cb448e6833f7b9ab23d38a}{}\label{classBiosystem_1_1BioSystem_a1ea37fee07cb448e6833f7b9ab23d38a}
+
+
+Compositors involving chemical reactions. 
+
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!constants@{constants}}
+\index{constants@{constants}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{constants}{constants}}]{\setlength{\rightskip}{0pt plus 5cm}Biosystem.\+Bio\+System.\+constants}\hypertarget{classBiosystem_1_1BioSystem_a849a36fc85493e2cc1798d7fd99a2771}{}\label{classBiosystem_1_1BioSystem_a849a36fc85493e2cc1798d7fd99a2771}
+
+
+Constants in a Biosystem. 
+
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!map\+\_\+compositors@{map\+\_\+compositors}}
+\index{map\+\_\+compositors@{map\+\_\+compositors}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{map\+\_\+compositors}{map_compositors}}]{\setlength{\rightskip}{0pt plus 5cm}Biosystem.\+Bio\+System.\+map\+\_\+compositors}\hypertarget{classBiosystem_1_1BioSystem_a927092fec3432044b77b39e106a75a40}{}\label{classBiosystem_1_1BioSystem_a927092fec3432044b77b39e106a75a40}
+
+
+A mapping between compositor name and its index in {\ttfamily constants} list. 
+
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!map\+\_\+constants@{map\+\_\+constants}}
+\index{map\+\_\+constants@{map\+\_\+constants}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{map\+\_\+constants}{map_constants}}]{\setlength{\rightskip}{0pt plus 5cm}Biosystem.\+Bio\+System.\+map\+\_\+constants}\hypertarget{classBiosystem_1_1BioSystem_a0b7ed650ff3a0db588b21d55151fbee6}{}\label{classBiosystem_1_1BioSystem_a0b7ed650ff3a0db588b21d55151fbee6}
+
+
+A mapping between constant name and its index in {\ttfamily constants} list. 
+
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!parts@{parts}}
+\index{parts@{parts}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{parts}{parts}}]{\setlength{\rightskip}{0pt plus 5cm}Biosystem.\+Bio\+System.\+parts}\hypertarget{classBiosystem_1_1BioSystem_adc4002931a29601944a3e11191af7707}{}\label{classBiosystem_1_1BioSystem_adc4002931a29601944a3e11191af7707}
+
+
+Parts in a Biosystem. 
+
+\index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!rates\+\_\+determined@{rates\+\_\+determined}}
+\index{rates\+\_\+determined@{rates\+\_\+determined}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{rates\+\_\+determined}{rates_determined}}]{\setlength{\rightskip}{0pt plus 5cm}Biosystem.\+Bio\+System.\+rates\+\_\+determined}\hypertarget{classBiosystem_1_1BioSystem_a9189d6eb1e1965d9b63cda27e53f08b7}{}\label{classBiosystem_1_1BioSystem_a9189d6eb1e1965d9b63cda27e53f08b7}
+
+
+Flag if function determine\+\_\+rates was called. 
+
+All Constant symbols.
+
+If False we need to call determine\+\_\+rates again.
+
+All Constant values. Pairs of symbols and its value. Convert Compositor rate string/formula to sympy expression and substitute all constants with its values. Convert sympy expression to python function with arguments\+: time, compositor1\+\_\+name, compositor2\+\_\+name, ... \index{Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}!symbols@{symbols}}
+\index{symbols@{symbols}!Biosystem\+::\+Bio\+System@{Biosystem\+::\+Bio\+System}}
+\paragraph[{\texorpdfstring{symbols}{symbols}}]{\setlength{\rightskip}{0pt plus 5cm}Biosystem.\+Bio\+System.\+symbols}\hypertarget{classBiosystem_1_1BioSystem_a4a04b16611692fee47542e344d7a332d}{}\label{classBiosystem_1_1BioSystem_a4a04b16611692fee47542e344d7a332d}
+
+
+List of all the Compositor symbols in ths \hyperlink{classBiosystem_1_1BioSystem}{Bio\+System} by initializing symbols with t we allow t to be a variable of time that\textquotesingle{}s not a Compositor or Constant. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Biosystem.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,72 @@
+The aim of the project was to create simple, easy accessible and editable framework for synthetic biology research, based on freely available libraries and programming languages.
+
+The tool was inspired by M\+IT university course „20.305x Principles of Synthetic Biology“ provided tool „\+Part-\/compositor framework“ which is based on „\+Mat\+Lab“ framework.
+
+Python programming language and its non-\/standard libraries\+: Sympy, Numpy, and Scipy were used to implement the goal, due to the similarity of the Mat\+Lab functionality required. The created tool can simulate concentrations of substances in time using chemical reaction differential equitations with the specified initial concentration conditions of substances.
+
+The implementation is available on the public github webpage\+: \href{https://github.com/eglepl/pybiosystem_framwork}{\tt https\+://github.\+com/eglepl/pybiosystem\+\_\+framwork}
+
+
+
+
+
+\subsubsection*{Requirements }
+
+
+\begin{DoxyItemize}
+\item Linux (might work with other OS)
+\item Python 2.\+7
+\item Python libraries\+:
+\begin{DoxyItemize}
+\item Sym\+Py v1.\+0
+\item Num\+Py v1.\+11.\+1
+\item Sci\+Py v0.\+18.\+1
+\item Matplotlib v1.\+5.\+3 (optional for data plotting) 
+
+
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\subsubsection*{Documentation }
+
+See the docs/html/index.\+php file for documentation reference and examples.
+
+The P\+DF version can be found in docs/latex folder. 
+
+
+
+\subsubsection*{Usage }
+
+
+\begin{DoxyCode}
+1 from Biosystem import *
+2 from Part import *
+3 from Rate import *
+4 from Pulse import *
+5 import matplotlib.pyplot as plt # optional for plotting
+6 
+7 sys = BioSystem()
+8 sys.addConstant('k', 0.05)
+9 dAdt = sys.addCompositor('A', 10)
+10 dBdt = sys.addCompositor('B', 0)
+11 dEdt = sys.addCompositor('E', 1)
+12 reaction  = Part(
+13 'A + E -k> B + E',
+14 [dAdt, dBdt, dEdt],
+15 [Rate('-k * A * E'), Rate('k * A * E'), Rate('0')])
+16 sys.addPart(reaction)
+17 T = None
+18 Y = None
+19 (T, Y) = sys.run([0, 25])
+20 
+21 # Plot the simulation data (optional if You want to plot data)
+22 plt.figure()
+23 plt.plot(T, Y[:, sys.compositorIndex('A')], label="A")
+24 plt.plot(T, Y[:, sys.compositorIndex('B')], label="B")
+25 plt.plot(T, Y[:, sys.compositorIndex('E')], label="E")
+26 plt.legend()
+27 plt.xlabel('Time')
+28 plt.ylabel('Concentration')
+29 plt.show()
+\end{DoxyCode}
+ 
